@@ -1,0 +1,59 @@
+.Tabs {
+    display:flex; height:2rem; line-height:2rem; position:relative;
+    .TabsItem {
+        display:inline-block; padding-left:.9rem; padding-right:.9rem;
+    }
+    .TabsCore {
+        display:inline-block; //position:absolute; left:0; bottom:0; top:0; left:0;
+    }
+
+    // 滑动条
+    .active-block {
+        height:100%;
+        background-color:transparent; display:block; overflow:hidden;
+        position:absolute; left:0; bottom:0; z-index:2;
+        transition:transform .2s cubic-bezier(.645,.045,.355,1), width .3s;
+        .active-bar {
+            width:100%; height:.1rem; display:block; background-color:#3dc2b9; border-radius:99px;    
+            position:absolute; left:0; bottom:0; right:0;
+        }
+    }
+    .bottom-bar {
+        height:.1rem; background-color:#ddd; 
+        position:absolute; left:0; bottom:0; right:0; z-index:1;
+    }
+
+    // 主体模式
+    &.Tabs-slider {
+        background-color:rgba(0,0,0,.1); border-radius:.3rem; display:inline-block; // border-top:.1rem solid rgba(0,0,0,.05); border-bottom:.1rem solid rgba(0,0,0,.05);
+        .active-block {
+            .active-bar {
+                width:auto;
+                height:82%; top:9%; bottom:9%; left:.2rem; right:.2rem; border-radius:.2rem; background-color:#fff;
+            }
+        }
+        .bottom-bar {
+            display:none;
+        }
+    }
+
+    // 大小
+    &.Tabs-small {
+        height:1.85rem; line-height:1.85rem; font-size:.9em;
+        .TabsItem {
+            padding-left:.8rem; padding-right:.8rem; height:1.85rem; line-height:1.85rem;
+        }
+        &.Tabs-slider {
+            height:1.75rem; line-height:1.75rem;
+        }
+    }
+    &.Tabs-mini {
+        height:1.7rem; line-height:1.7rem; font-size:.8em;
+        .TabsItem {
+            padding-left:.7rem; padding-right:.7rem; height:1.7rem; line-height:1.7rem;
+        }
+        &.Tabs-slider {
+            height:1.55rem; line-height:1.55rem;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.Pgination {
+    font-size:.6rem; text-align:right; display:flex; align-items:center;
+    .pgination-main {
+        flex:1;
+    }
+    ul{
+        overflow:hidden; display:inline-block; 
+        li {
+            background:#fff; float:left; padding:.37rem .54rem; border:.03rem solid #E5E9F2; border-radius:.2rem; cursor:pointer; margin:0 .1rem;
+        } 
+        li:hover {border-color:#20A0FF;}
+        li.active {
+            background-color:#20A0FF;  border-color:#20A0FF; color:#fff;
+        }
+    }
+    input.go {width:2rem; border:.03rem solid #E5E9F2; border-radius:.2rem; padding:.37rem .4rem;}
+    span {color:#8492A6; margin:0 .25rem;}
+    &.mini {
+        ul{
+            overflow:hidden; display:inline-block; 
+            li {background:#fff; padding:.3rem .45rem;}
+            li.active {color:#20A0FF; font-weight:bold;}
+        }
+    }
+}

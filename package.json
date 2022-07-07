@@ -1,0 +1,72 @@
+{
+  "name": "icebartech-disabled",
+  "version": "0.4.4",
+  "copyright": "",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --report",
+    "build": "vue-cli-service build --mode production --report",
+    "lint": "vue-cli-service lint",
+    "clear": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@riophae/vue-treeselect": "^0.4.0",
+    "axios": "^0.18.1",
+    "big.js": "^5.2.2",
+    "bootstrap": "^3.4.1",
+    "codemirror": "^5.37.0",
+    "crypto-js": "^4.0.0",
+    "easemob-websdk": "^1.8.3",
+    "element-ui": "^2.13.0",
+    "file-saver": "^2.0.5",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^8.0.1",
+    "npm-cli": "^0.1.0",
+    "popper.js": "^1.15.0",
+    "qs": "^6.7.0",
+    "strophe.js": "^1.2.16",
+    "summernote": "^0.8.1",
+    "vue": "^2.6.6",
+    "vue-axios": "^2.1.4",
+    "vue-cropperjs": "^4.0.1",
+    "vue-loader": "^15.8.3",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.1.1",
+    "vuex": "^3.0.1",
+    "webpack-dev-server": "^3.11.0",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "autoprefixer": "^9.5.1",
+    "core-js": "^2.6.5",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "script-loader": "^0.7.2",
+    "vue-cli-plugin-axios": "0.0.4",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-cli-plugin-postcss-preset": "^1.0.2",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.8.3"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-preset-env": {
+        "stage": 2
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "description": "1、如何运行测试模式？ 命令行执行 npm run dev",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
+}

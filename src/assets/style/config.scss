@@ -1,0 +1,160 @@
+
+$prefix : 'hm-';
+
+$color-t   : #1A191e!default; // 
+$color-t-2 : #e93b39!default;
+$color-t-3 : #09BB07!default;
+
+$color-p   : #20a0ff!default; $color-p-a   : #20a0ff!default; $color-p-h   : #20a0ff!default;
+$color-s   : #13ce66!default; $color-s-a   : #13ce66!default; $color-s-h   : #13ce66!default;
+$color-w   : #f9af10!default; $color-w-a   : #f7ba2a!default; $color-w-h   : #f7ba2a!default;
+$color-e   : #ff6666!default; $color-e-a   : #ff4949!default; $color-e-h   : #ff4949!default;
+$color-i   : #9a9a9a!default; $color-i-a   : #50BFFF!default; $color-i-h   : #50BFFF!default;
+
+$color-b   : #333!default;
+$color-b-2 : #4d4d4d!default;
+$color-b-3 : #666!default;
+
+$color-g   : #999!default;
+$color-g-2 : #999!default;
+$color-g-3 : #808080!default;
+
+$color-l   : #e5e5e5!default;
+$color-l-2 : #d9d9d9!default;
+$color-l-3 : #d1d1d1!default;
+
+$color-f   : #FFF!default;
+$color-n   : transparent!default;
+
+$border-color : #EEE!default;
+$hr-color     : $color-l!default;
+
+$btn-radius     : 3px!default;
+$btn-transition : 0.3s!default;
+
+$nav-head-height      : 2.4rem!default;
+$nav-head-bg 		  : $color-t!default;
+$nav-head-color 	  : #fff!default;
+$nav-head-btn-width   : auto!default;
+$nav-head-btn-padding : 0.7rem!default;
+
+$nav-foot-height     : auto!default;
+$nav-foot-fontsize   : 0.6rem!default;
+$nav-foot-iconsize   : 1.2rem!default;
+$nav-foot-padding    : 0.2rem!default;
+$nav-foot-bg         : #fff!default;
+$nav-foot-color      : #999!default;
+$nav-foot-btn-active : $color-t!default;
+
+$tab-s        : 0.44rem!default;
+$tab-m        : 0.6rem!default;
+$tab-l        : 0.8rem!default;
+$tab-fontsize : 0.7rem!default;
+$tab-bg       : #fff!default;
+$tab-active   : $color-t!default;
+
+
+$list-head-color        : $color-g !default;
+$list-head-padding      : 0.4rem 0.6rem !default;
+$list-foot-color        : $list-head-color !default;
+$list-foot-padding      : 0.8rem 0.6rem !default;
+
+$list-all-pading-left           : 0 !default;
+$list-all-padding-right         : 0 !default;
+$list-all-item-padding-left     : 0.7rem  !default;
+$list-all-item-padding-right    : 0.7rem  !default;
+
+$list-cell-height               : 2.4rem !default;
+$list-cell-padding-left         : $list-all-pading-left !default;
+$list-cell-padding-right        : $list-all-padding-right !default;
+$list-cell-item-padding-left    : $list-all-item-padding-left !default;
+$list-cell-item-padding-right   : 0 !default;
+$list-cell-right-color          : $color-g !default;
+$list-cell-right-i-color        : $color-g-2 !default;
+
+$list-input-padding-left        : $list-all-pading-left !default;    
+$list-input-padding-right       : $list-all-padding-right !default;
+$list-input-item-padding-top    : 0.3rem !default;
+$list-input-item-padding-bottom : 0.3rem !default;
+$list-input-item-padding-left   : $list-all-item-padding-left !default;
+$list-input-item-padding-right  : $list-all-item-padding-right !default;
+$list-input-label-width         : 3.5rem !default;
+
+$list-panel-padding-left        : $list-all-pading-left !default;
+$list-panel-padding-right       : $list-all-padding-right !default;
+$list-panel-item-padding-top    : 0.3rem !default;
+$list-panel-item-padding-bottom : 0.3rem !default;
+$list-panel-item-padding-left   : $list-all-item-padding-left !default;
+$list-panel-item-padding-right  : $list-all-item-padding-right !default;
+$list-panel-inner-padding       : 0.2rem !default;
+$list-panel-media-width         : 3.6rem !default;
+$list-panel-title-color         : $color-g !default;
+$list-panel-text-color          : $color-g-2 !default;
+$list-panel-price-color         : $color-t !default;
+
+%list-common {margin:0; position:relative; display:block;}
+
+
+%radius     {@extend %radius-m;}
+%radius-s   {border-radius:3px;    &:after{border-radius:3px;}}
+%radius-m   {border-radius:4px;    &:after{border-radius:4px;}}
+%radius-l   {border-radius:6px;    &:after{border-radius:6px;}}
+%radius-n   {border-radius:0;      &:after{border-radius:0;}}
+%radius-max {border-radius:9999px; &:after{border-radius:9999px;}}
+
+
+%float-l {float:left;}
+%float-r {float:right;}
+%float-b {overflow:hidden;}
+%float-n {float:none;}
+
+
+%text-l {text-align:left;}
+%text-r {text-align:right;}
+%text-c {text-align:center;}
+%text-j {text-align:justify;}
+%text-n {white-space:owrap;}
+
+
+%flex {display:flex;}
+%flex-vertical {display:flex; flex-flow:column;}
+%flex-center   {display:flex; align-items:center;}
+%flex-1{flex:1;}
+%flex-2{flex:2;}
+%flex-3{flex:3;}
+%flex-4{flex:4;}
+%flex-5{flex:5;}
+%flex-6{flex:6;}
+%flex-7{flex:7;}
+%flex-8{flex:8;}
+
+
+%border {
+    position: relative;
+    &:after {@extend %border-after;}
+}
+%border-after {
+    display:block; content:''; position: absolute; top:0; right:0; bottom:0; left:0;
+    -webkit-transform-origin:0 0; -webkit-transform:scale(1);pointer-events:none;
+    border-width:0; border-style:solid; border-color:$border-color;
+    @media screen and (-webkit-min-device-pixel-ratio:1.5) {
+        & {
+            right: -100%; bottom: -100%; -webkit-transform: scale(0.5);
+        }
+    }
+}
+
+%border-l-after  {border-left-width:1px;}
+%border-r-after  {border-right-width:1px;}
+%border-t-after  {border-top-width:1px;}
+%border-b-after  {border-bottom-width:1px;}
+%border-lf-after {border-left-width:1px; border-right-width:1px;}
+%border-tb-after {border-top-width:1px; border-bottom-width:1px;}
+%border-all      {border-width:1px;}
+%border-n        {border-width:0;}
+
+
+%hr {
+    border:0; position:relative;
+    &:after {@extend %border-t-after;}
+}

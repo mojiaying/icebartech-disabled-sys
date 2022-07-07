@@ -1,0 +1,278 @@
+@import "@/assets/style/project/config.scss";
+.Button {
+    display:inline-block; vertical-align:middle; cursor:pointer; box-sizing:border-box; position:relative;
+    border-radius:.2rem; overflow:hidden; user-select:none; 
+    button {
+        display:inline-block; width:100%; height:100%; line-height:inherit;  //vertical-align:bottom; box-sizing:border-box;
+        background-color:$color-n; cursor:pointer;
+        &, &:hover, &:active, &:focus {
+            border:none; outline:none; border:1px solid $color-n; border-radius:.2rem;
+        }
+
+    }
+    &:hover, &:active, &:focus {
+        transition:background-color .3s;
+    }
+    
+    .Button-content {
+        display:inline-block; height:100%; position:relative; top:-1px;
+    }
+    .Button-icon {
+        display:inline-block; line-height:inherit; 
+        position:relative; top:-.04rem;
+    }
+    .Button-slot {
+        line-height:inherit;
+        svg, b, span, i {
+            vertical-align:middle;
+        }
+    }
+    // 间隙
+    &+.Button {
+        margin-left:.3rem;
+    }
+    // 颜色
+    &.Button-theme, &.Button-t {
+        background-color:$color-t; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-t,.3);
+            background-color:lighten($color-t,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-t,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:$color-t;
+            button {
+                border-color:$color-t;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-t,.15);
+        }
+    }
+    &.Button-primary, &.Button-p, &.Button-work {
+        background-color:$color-p; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-p,.3);
+            background-color:lighten($color-p,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-p,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:$color-p;
+            button {
+                border-color:$color-p;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-p,.15);
+        }
+    }
+    &.Button-warning, &.Button-wn {
+        background-color:$color-w; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-w,.3);
+            background-color:lighten($color-w,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-w,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:$color-w;
+            button {
+                border-color:$color-w;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-w,.15);
+        }
+    }
+    &.Button-success, &.Button-s {
+        background-color:$color-s; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-s,.3);
+            background-color:lighten($color-s,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-s,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:$color-s;
+            button {
+                border-color:$color-s;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-s,.15);
+        }
+    }
+    &.Button-error, &.Button-danger,  &.Button-e, &.Button-d {
+        background-color:$color-e; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-e,.3);
+            background-color:lighten($color-e,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-e,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:$color-e;
+            button {
+                border-color:$color-e;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-e,.15);
+        }
+    }
+    &.Button-info, &.Button-i {
+        background-color:$color-i; color:#fff;
+        &:hover {
+            box-shadow:0 0 4px 1px rgba($color-i,.3);
+            background-color:lighten($color-i,5%);
+        }
+        &:active, &:focus {
+            background-color:darken($color-i,7%);
+        }
+        &[plain], &[plain]:hover {
+            color:#333;
+            button {
+                border-color:$color-i;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-i,.15);
+        }
+    }
+    &.Button-white, &.Button-w, {
+        background-color:#fff; color:#333; transition:background-color,.3s;
+        &:hover {
+            // box-shadow: 0 0 4px 1px rgba(0,0,0,.05);
+            box-shadow:0 0 0 0 transparent;
+            background-color:#f0f0f0;
+        }
+        &:active, &:focus {
+            background-color:#e5e5e5;
+        }
+        &[plain], &[plain]:hover {
+            color:#333;
+            button {
+                border-color:$color-i;
+            }
+        }
+        &[plain]:hover, &[plain]:active, &[plain]:focus {
+            background-color:rgba($color-i,.15);
+        }
+    }
+    &.Button-none, &.Button-n, &.Button-ghost, &.Button-g {
+        background-color:transparent; color:#333;
+        &:hover {
+            box-shadow:0 0 0 0 transparent;
+            background-color:transparent;
+        }
+        &:active, &:focus {
+            background-color:transparent;
+        }
+    }
+    &.Button-ghost, &.Button-g {
+        &:hover {
+            background-color: rgba(0,0,0,.06);
+        }
+        &:active, &:focus {
+            background-color: rgba(0,0,0,.06);
+        }
+    }
+    // 尺寸
+    &.Button-big {
+        height:2.05rem; line-height:2.05rem;
+        button {
+            padding:0 .9rem;
+        } 
+    }
+    &.Button-normal {
+        height:1.8rem; line-height:1.8rem;
+        button {
+            padding:0 .8rem;
+        }
+    }
+    &.Button-medium{
+        height:1.6rem; line-height:1.6rem;
+        button {
+            padding:0 .7rem;
+        }
+    }
+    &.Button-small {
+        height:1.4rem; line-height:1.4rem;
+        button {
+            padding:0 .55rem;
+        } 
+    }
+    &.Button-mini {
+        height:1.2rem; line-height:1.2rem;
+        button {
+            padding:0 .4rem; font-size:.6rem;
+        }             
+        &+.Button {
+            margin-left:.2rem;
+        }
+    }
+    &[block], &[full] {
+        display:block; text-align:center;
+    }
+    &[long]{
+        &.Button-big {button {padding:0 1.8rem;}}
+        &.Button-normal {button {padding:0 1.4rem;}}  
+        &.Button-small {button {padding:0 1.1rem;}}
+        &.Button-mini {button {padding:0 .7rem;}}
+    }
+    &[round]{
+        border-radius:99rem;
+    }
+    &[circle], &.Button-circle{
+        border-radius:99rem; width:1.8rem; height:1.8rem; line-height:1.8rem;
+        button {
+            padding:0;
+        }
+        .slot {
+            // display:none;
+        }
+        &.Button-big {
+            width:2rem; height:2rem; line-height:2rem;
+        }
+        &.Button-small {
+            width:1.55rem; height:1.55rem; line-height:1.55rem;
+        }
+        &.Button-mini {
+            width:1.4rem; height:1.4rem; line-height:1.4rem;
+        }
+    }
+    &[plain], &[plain]:hover{
+        background-color:$color-n;
+    }
+    &[disabled]{
+        cursor:not-allowed;
+        button {
+            cursor:not-allowed;
+        }
+    }
+    &[disabled]:not([plain]) {
+        background-color:#d5d5d5; color:#888; cursor:not-allowed;
+        &:hover, &:active, &:focus {
+            background-color:#d5d5d5; color:#888;
+        }
+        button {
+            cursor:not-allowed;
+        }
+    }
+    &[disabled][plain] {
+        opacity:.65;
+        &:hover, &:active, &:focus {
+            background-color:$color-n;
+        }
+        button {
+            cursor:not-allowed; border-style: dashed;
+        }
+    }
+}

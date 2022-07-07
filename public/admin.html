@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>残联机构后台管理系统</title>
+        <style>
+            .cloak {
+                position:fixed; top:0; bottom:0; left:0; right:0; background:#F5F5F5; z-index:1000;
+            }
+            .cloak-box {
+                width:80%; min-width:320px; max-width:420px; margin:0 auto; padding-top:175px; padding-top:46vh;
+
+            }
+            .cloak-loading{
+                margin:0 auto; text-align:center;
+            }
+            .cloak-loading span{
+                display:inline-block; width:7px; height:7px; margin-right:5px; background:#999; border-radius:99px; overflow:hidden;
+                -webkit-animation: load 1.04s ease infinite;
+            }
+            .cloak-loading span:last-child{
+                margin-right: 0px; 
+            }
+            @-webkit-keyframes load{
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            .cloak-loading span:nth-child(1){
+                -webkit-animation-delay:0.13s;
+            }
+            .cloak-loading span:nth-child(2){
+                -webkit-animation-delay:0.26s;
+            }
+            .cloak-loading span:nth-child(3){
+                -webkit-animation-delay:0.39s;
+            }
+            .cloak-logo {
+                width:75%; display:block; margin:25vh auto 0 auto;
+            }
+            .cloak-text {
+                text-align:center; color:#999; margin:10px 0 10px 0; font-size:14px;
+            }
+        </style>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="app">
+            <router-view ></router-view>
+            <div class="cloak" v-show="false">
+                <div class="cloak-box">                 
+                    <div class="cloak-loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="cloak-text">系统初始化</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- <script>
+    export default {
+
+        data(){
+            return
+        },
+        computed:{
+            key(){
+                return this.$route.path+Math.random()
+            }
+        }
+
+    }
+</script> -->

@@ -1,0 +1,38 @@
+@import "./config.scss";
+
+/* 改变主题色变量 */
+$--color-primary: $color-t;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-loading-mask {
+    transition:none;
+}
+
+/* 右上角弹窗样式 */
+.el-notification {
+    border: 1px solid hsla(224, 10%, 88%, 1);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.el-divider {
+    background-color:#cdd0d5;
+}
+.el-divider--vertical {
+    margin: 0 .6rem;
+}
+
+.popover-simple {
+	padding:0; min-height:1rem; box-shadow:0 2px 10px 0 rgba(0,0,0,0.2);
+}
+.el-dialog__body {
+	color:#333;
+}
+
+.el-icon-circle-close {
+	color:#FFF;
+}

@@ -1,0 +1,175 @@
+@import "../reset.css";
+@import "./config.scss";
+@import "../hami.scss";
+@import "./element-variables.scss";
+@import "./animation.scss";
+
+html {
+
+}
+
+.avatar {
+	display:inline-block; width:2.6rem; height:2.6rem; border-radius:999px; overflow:hidden;
+	img {
+		display:block; margin:0 auto; width:100%; height:100%; overflow:hidden;
+	}
+}
+
+.Pgination {
+    ul{
+        li:hover {border-color:$color-t!important;}
+        li.active {
+            background-color:$color-t!important; border-color:$color-t!important;
+        }
+    }
+}
+
+.el-button--work {
+	color: #fff;
+	background-color: #409eff;
+	border-color: #409eff;
+	&:focus, &:hover {
+	    background: #66b1ff;
+	    border-color: #66b1ff;
+	    color: #fff;
+	}
+	&.is-disabled {
+		background-color: #a0cfff;
+	    border-color: #a0cfff;
+		&:focus, &:hover {
+		    background: #a0cfff;
+		    border-color: #a0cfff;
+		    color:#fff;
+		}
+	}
+}
+
+.layout-fixed {
+	position:absolute; top:0; left:0; bottom:0; right:0; overflow:auto;
+}
+
+.block {
+	background-color:#FFF; padding-top:12px; padding-bottom:12px; box-shadow:1px 2px 12px rgba(100,100,100,.1); border-radius:4px;
+}
+.block-n {
+	background-color:#FFF;
+}
+
+.el-table .cell, .el-table th div {
+    padding-right:.4rem; padding-left:.4rem;
+}
+.el-table {
+	th:first-child, td:first-child {
+		.cell{
+			padding-left:.6rem;
+		}
+	}
+	th:last-child, td:last-child {
+		.cell{
+			padding-right:.6rem;
+		}
+	}	
+}
+.el-button[full], .el-input[full]{
+	width:100%;
+}
+.App{
+	.el-button+.el-button{
+	    margin-left:.3rem;
+	}
+	.el-button.is-circle+.el-button.is-circle {
+		margin-left:.3rem;
+	}
+}
+.el-dialog__header {
+	background-color:#f0f0f0;
+}
+
+
+
+
+.el-dialog__wrapper {
+	.el-dialog {
+		width:28rem; max-width:88%; border-radius:.2rem;
+	    .el-dialog__header {
+	        padding-top:1.1rem; padding-bottom:.7rem; font-size:.85rem; border-radius:.2rem .2rem 0 0;
+	    }
+	    .el-dialog__body {
+	        padding-top:16px; padding-bottom:24px;
+	    }
+		.el-dialog__headerbtn {
+			font-size:1rem; top:20px;
+		}
+	}
+}
+
+.el-dialog__wrapper[size=huge] {
+    .el-dialog {
+        width:60rem; max-width:96%;
+    }
+}
+.el-dialog__wrapper[size=big] {
+    .el-dialog {
+        width:42rem; max-width:92%;
+    }
+}
+.el-dialog__wrapper[size=small] {
+    .el-dialog {
+        width:20rem; max-width:94%;
+    }
+}
+.el-dialog__wrapper[size=mini] {
+    .el-dialog {
+        width:16rem; max-width:94%;
+    }
+}
+
+
+
+img[lazy=loading] {
+	background-color:#f5f5f5; opacity:.5;
+}
+img[lazy=error] {
+	background-color:#f5f5f5;
+}
+img[lazy=loaded] {
+	background-color:#f5f5f5; transition:opacity .3s; opacity:1;
+}
+
+
+::-webkit-scrollbar{
+	width:.3rem; height:.3rem; background-color:#F5F5F5;
+}
+::-webkit-scrollbar-track{
+	border-radius:.2rem; background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb{
+	border-radius:.3rem; background-color:#c2c2c2;
+}
+
+
+.waves-ripple {
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-clip: padding-box;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+}
+.waves-ripple.z-active {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    -webkit-transition: opacity 91.2s ease-out, -webkit-transform 0.6s ease-out;
+    transition: opacity 1.2s ease-out, -webkit-transform 0.6s ease-out;
+    transition: opacity 1.2s ease-out, transform 0.6s ease-out;
+    transition: opacity 1.2s ease-out, transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
+}
